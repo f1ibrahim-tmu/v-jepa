@@ -24,9 +24,6 @@ random_number=$(shuf -i 1-20 -n 1)
 if [ -d "$videos_dir" ]; then
     # Find directories and their files
     for folder in $(find "$videos_dir" -mindepth 1 -maxdepth 1 -type d); do
-        # Generate random number between 1 and 20 to represent class label
-        random_number=$(shuf -i 1-20 -n 1)
-        echo "Generated random number: $random_number"
         for file in $(find "$folder" -maxdepth 1 -type f -name "*.mp4"); do
             file="${file}"
             # Append absolute file path to existing CSV file
