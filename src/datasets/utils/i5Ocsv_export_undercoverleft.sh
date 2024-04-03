@@ -17,6 +17,8 @@ echo $videos_dir
 
 # Specify the existing CSV file to append to
 existing_csv="i5O_index_file.csv"
+# Generate random number between 1 and 20 to represent class label
+random_number=$((1 + RANDOM % 20))
 
 # Check if the directory exists
 if [ -d "$videos_dir" ]; then
@@ -25,7 +27,9 @@ if [ -d "$videos_dir" ]; then
         for file in $(find "$folder" -maxdepth 1 -type f -name "*.mp4"); do
             file="${file/videos\//videos}"
             # Append absolute file path to existing CSV file
-            echo "$file" >> "$existing_csv"
+            echo "\"$file\", $random_number" >> "$existing_csv"
+            # Generate a new random number for the next entry
+            random_number=$((1 + RANDOM % 20))
         done
     done
     echo "Data appended to $existing_csv"
