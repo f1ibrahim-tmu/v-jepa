@@ -25,7 +25,7 @@ if [ -d "$videos_dir" ]; then
     # Find directories and their files
     for folder in $(find "$videos_dir" -mindepth 1 -maxdepth 1 -type d); do
         for file in $(find "$folder" -maxdepth 1 -type f -name "*.mp4"); do
-            file="${file/videos\//videos}"
+            file="${file}"
             # Append absolute file path to existing CSV file
             echo "\"$file\", $random_number" >> "$existing_csv"
             # Generate a new random number for the next entry
