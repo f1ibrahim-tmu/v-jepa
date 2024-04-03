@@ -19,6 +19,7 @@ echo $videos_dir
 existing_csv="i5O_index_file.csv"
 # Generate random number between 1 and 20 to represent class label
 random_number=$((1 + RANDOM % 20))
+echo "Generated random number: $random_number"
 
 # Check if the directory exists
 if [ -d "$videos_dir" ]; then
@@ -30,6 +31,8 @@ if [ -d "$videos_dir" ]; then
             echo "\"$file\", $random_number" >> "$existing_csv"
             # Generate a new random number for the next entry
             random_number=$((1 + RANDOM % 20))
+            echo "Generated random number: $random_number"
+            
         done
     done
     echo "Data appended to $existing_csv"
