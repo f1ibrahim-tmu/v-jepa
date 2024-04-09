@@ -12,8 +12,8 @@ import multiprocessing as mp
 import pprint
 import yaml
 
-from app.scaffold import main as app_main
-from src.utils.distributed import init_distributed
+from ..app.scaffold import main as app_main
+from ..src.utils.distributed import init_distributed
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
