@@ -13,7 +13,7 @@ import pprint
 import yaml
 
 from scaffold import main as app_main
-from src.utils.distributed import init_distributed
+from ..src.utils.distributed import init_distributed
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
