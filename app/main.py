@@ -5,6 +5,9 @@
 # LICENSE file in the root directory of this source tree.
 #
 
+import sys
+sys.path.append('/data/fady/aar/v-jepa/')
+
 import argparse
 
 import multiprocessing as mp
@@ -13,7 +16,7 @@ import pprint
 import yaml
 
 from scaffold import main as app_main
-from ..src.utils.distributed import init_distributed
+from src.utils.distributed import init_distributed
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
