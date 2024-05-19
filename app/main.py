@@ -6,6 +6,7 @@
 #
 
 import sys
+import os
 sys.path.append('/data/fady/aar/v-jepa/')
 # Add the directory containing scaffold.py to sys.path
 sys.path.insert(0, os.path.abspath('/data/fady/aar/v-jepa/'))
