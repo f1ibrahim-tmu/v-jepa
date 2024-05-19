@@ -9,7 +9,7 @@ import sys
 import os
 sys.path.append('/data/fady/aar/v-jepa/')
 # Add the directory containing scaffold.py to sys.path
-sys.path.insert(0, os.path.abspath('/data/fady/aar/v-jepa/'))
+sys.path.insert(0, os.path.abspath("/data/fady/aar/v-jepa/app/"))
 
 import argparse
 
@@ -18,7 +18,7 @@ import multiprocessing as mp
 import pprint
 import yaml
 
-from scaffold import main as app_main
+from app.scaffold import main as app_main
 from src.utils.distributed import init_distributed
 
 parser = argparse.ArgumentParser()
