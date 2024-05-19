@@ -18,7 +18,7 @@ import multiprocessing as mp
 import pprint
 import yaml
 
-from scaffold.py import main as app_main
+from scaffold import main as app_main
 from src.utils.distributed import init_distributed
 
 parser = argparse.ArgumentParser()
